@@ -1,16 +1,19 @@
-# React + Vite
+# SarcoSystem
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação clínica para cadastro de pacientes, avaliações e relatórios de sarcopenia.
 
-Currently, two official plugins are available:
+## Estrutura
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `src/` - frontend React + Vite
+- `server/` - API Node + Express + MongoDB
 
-## React Compiler
+## Como rodar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Inicie o MongoDB localmente ou configure sua `MONGO_URI`.
+2. Copie `server/.env.example` para `server/.env` e ajuste os valores.
+3. No backend, instale as dependências e rode a API.
+4. No frontend, rode o Vite normalmente.
 
-## Expanding the ESLint configuration
+## API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+O frontend usa a URL definida em `VITE_API_BASE_URL` ou, por padrão, `http://localhost:3002`.

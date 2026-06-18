@@ -11,7 +11,7 @@ import Reports from "./pages/Reports"
 import Users from "./pages/Users"
 import { initialReports } from "./data/clinicData"
 
-const API_BASE = "http://localhost:3001"
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3002"
 
 function App() {
   const [page, setPage] = useState("dashboard")
